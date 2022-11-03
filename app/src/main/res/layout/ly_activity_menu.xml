@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_refresh_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textSize="16dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bienvenido"/>
+            <TextView android:textSize="22dp" android:textStyle="bold" android:gravity="center" android:id="@+id/tvNombreUsuario" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="80dp" android:text="Nombre Apellido y Apellido"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll1" android:layout_width="match_parent" android:layout_height="200dp">
+                <RelativeLayout android:id="@+id/rlSpaceLeft" android:background="@drawable/style_rounded_view_orange" android:visibility="gone" android:layout_width="88dp" android:layout_height="match_parent" android:layout_toRightOf="@+id/rlOffLine"/>
+                <RelativeLayout android:id="@+id/rlChat" android:background="@drawable/style_rounded_view_orange" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp" android:layout_weight="1" android:layout_toRightOf="@+id/rlOffLine">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/imgReclamos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:src="@drawable/ic_chat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="CHAT"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rlSpaceRight" android:background="@drawable/style_rounded_view_orange" android:visibility="gone" android:layout_width="88dp" android:layout_height="match_parent" android:layout_toRightOf="@+id/rlOffLine"/>
+                <RelativeLayout android:orientation="vertical" android:id="@+id/rlOffLine" android:background="@drawable/style_rounded_view_green" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp" android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/imgAsistencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:src="@drawable/ic_chart_pie" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="OFFLINE"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="240dp" android:layout_height="wrap_content">
+                    <RelativeLayout android:orientation="vertical" android:id="@+id/rlConsultaTicket" android:background="@drawable/style_rounded_search_ticket" android:visibility="visible" android:layout_width="match_parent" android:layout_height="140dp" android:layout_margin="16dp" android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="240dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/imgConsultaTicket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="4"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                android:src="@drawable/ic_search_black_24dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="CONSULTA DE TICKETS"
+                                android:textColor="@color/colorWhite"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

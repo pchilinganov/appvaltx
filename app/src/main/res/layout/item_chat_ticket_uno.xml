@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/layoutchat1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="8">
+            <TextView android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt1" android:background="@drawable/circulo_texto" android:layout_width="40dp" android:layout_height="40dp" android:text="M"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/circulo_chat_uno" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="12dp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtuserId1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="USUARIO"/>
+            <TextView android:textSize="12dp" android:textColor="@color/colorWhite" android:id="@+id/mensaje1" android:padding="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buenos dias este mensaje no puede Buenos dias este mensaje no puedeBuenos dias este mensaje no puede"/>
+            <TextView android:textSize="11dp" android:id="@+id/txtfecha1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="10/10/2019"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/layoutchat2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/circulo_chat_dos" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="12dp" android:textStyle="bold" android:textColor="@color/colorBlack" android:gravity="end" android:id="@+id/txtuserId2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="USUARIO"/>
+            <TextView android:textSize="12dp" android:textColor="@color/colorBlack" android:gravity="end" android:id="@+id/mensaje2" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Buenos "/>
+            <TextView android:textSize="11dp" android:gravity="end" android:id="@+id/txtfecha2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="10/10/2019"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="7">
+            <TextView android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center" android:id="@+id/txt2" android:background="@drawable/circulo_texto" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginLeft="2dp" android:text="M"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorFondoChat" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="5dp">
+        <EditText android:theme="@style/MyEditTextTheme" android:gravity="center_vertical" android:id="@+id/eTEsribirMensaje" android:background="@drawable/style_rounded_edittext_states" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="4dp" android:layout_marginRight="5dp" android:hint="Escribe un mensaje..." android:maxLength="500" android:layout_toLeftOf="@+id/bTenviarMensaje" android:layout_alignParentBottom="true"/>
+
+        <ImageButton
+            android:id="@+id/bTenviarMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_background_send"
+            android:src="@drawable/send" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMensajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/eTEsribirMensaje"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorFondoChat" />
+    </RelativeLayout>
+</LinearLayout>

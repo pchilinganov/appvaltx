@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textColor="@color/colorTextGray" android:gravity="center_vertical" android:id="@+id/textAutoComplete" android:background="#00ff0000" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent"/>

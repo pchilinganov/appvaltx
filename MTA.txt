@@ -1,0 +1,427 @@
+package chat.atc.tges.tgeschat;
+
+import android.Manifest;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.provider.MediaStore;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
+import android.text.Html;
+import android.text.InputFilter;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.NoConnectionError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import chat.atc.tges.tgeschat.Mensajes.Mensajeria;
+import chat.atc.tges.tgeschat.VolleyMultiPart.VolleyMultipartRequest;
+import chat.atc.tges.tgeschat.VolleyMultiPart.VolleySingleton;
+import chat.atc.tges.tgeschat.activity.ActivityConsultaTicket;
+import chat.atc.tges.tgeschat.activity.ActivityMenu;
+import chat.atc.tges.tgeschat.databaseOnline.BaseVolleyActivity;
+import chat.atc.tges.tgeschat.databaseOnline.VolleyRP;
+import chat.atc.tges.tgeschat.interfaces.ServerCallback;
+import chat.atc.tges.tgeschat.model.DTO_Generico;
+import chat.atc.tges.tgeschat.model.DTO_ticket;
+import chat.atc.tges.tgeschat.util.GlobalFunctions;
+import chat.atc.tges.tgeschat.varPublicas.varPublicas;
+
+import static chat.atc.tges.tgeschat.util.GlobalFunctions.newIntent;
+import static chat.atc.tges.tgeschat.varPublicas.varPublicas.URL_DESARROLLO;
+
+public class FormularioOffLine extends BaseVolleyActivity {
+    AutoCompleteTextView actvTipoDoc;
+    EditText txtNumeroDoc,txtNumeroServicio,txtDireccionCorrecta;
+    LinearLayout lyadjuntar;
+    Button btnAceptar, btnCancelar;
+
+    String pCodTipoDoc = "";
+    String token="", cbo_type_document="",txt_number_document="",txt_number_servicio="",txt_direccion_correcta="",id_session="",id_vendedor="";
+
+    List<DTO_Generico> listTipoDoc = new ArrayList<>();
+    private VolleyRP volley;
+    private RequestQueue mRequest;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.ly_dialog_formulario_offline);
+        volley = VolleyRP.getInstance(this);
+        mRequest = volley.getRequestQueue();
+        init();
+
+        btnCancelar = (Button) findViewById(R.id.btnCancelar);
+        this.btnCancelar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Cancelar();
+            }
+        });
+
+        /*this.txtNumeroDoc.setText( ((TGestionaSession) getApplication()).getTokenMovil());
+        this.txtNumeroServicio.setText( ((TGestionaSession) getApplication()).getIdSession());
+        this.txtDireccionCorrecta.setText( ((TGestionaSession) getApplication()).getIdVendedorChat());*/
+
+    }
+
+    public void Cancelar(){
+        actvTipoDoc.setText("");
+        txtNumeroDoc.setText("");
+        txtNumeroServicio.setText("");
+        txtDireccionCorrecta.setText("");
+    }
+
+    public void init() {
+        txtNumeroDoc = (EditText) findViewById(R.id.txtNumeroDoc);
+        txtNumeroServicio = (EditText) findViewById(R.id.txtNumeroServicio);
+        txtDireccionCorrecta = (EditText) findViewById(R.id.txtDireccionCorrecta);
+        btnAceptar = (Button) findViewById(R.id.btnAceptar);
+
+        actvTipoDoc = (AutoCompleteTextView) findViewById(R.id.actvTipoDoc);
+        lyadjuntar  = (LinearLayout)  findViewById(R.id.ly_adjunta_file);
+
+        actvTipoDoc.setOnItemClickListener(new AdapterView.OnItemClickListener() { //manejo de evento de seleción de dep, prov, dist
+            @Override
+            public void onItemClick(AdapterView<?> parent, View arg1, int pos, long id) {
+                txtNumeroDoc.setText("");
+                pCodTipoDoc = listTipoDoc.get(pos).getCodigo();
+                if (pCodTipoDoc.equalsIgnoreCase("1")) {
+                    txtNumeroDoc.setFilters(new InputFilter[]{new InputFilter.LengthFilter(8)});
+                } else if (pCodTipoDoc.equalsIgnoreCase("2")) {
+                    txtNumeroDoc.setFilters(new InputFilter[]{new InputFilter.LengthFilter(11)});
+                }
+            }
+        });
+
+        this.btnAceptar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                registrarFormulario();
+            }
+        });
+
+        lyadjuntar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                permisoAdjuntar();
+            }
+        });
+
+        String WSMethod = "";
+        WSMethod = "showTipoDocChat";
+        String URL = URL_DESARROLLO + WSMethod;
+
+        Map<String, String> params = new HashMap<String, String>();
+
+        final String json = GlobalFunctions.callVolleyStringRequest(this, params, URL, volley, mRequest, new ServerCallback() {
+                    @Override
+                    public void onSuccess(String result) {
+                        //result = GlobalFunctions.loadJSONFromAsset(getApplicationContext(),"array.json");
+                        try {
+                            JSONArray JOListaDatos = new JSONArray(result);
+                            JSONArray JATIpoOperacion, JATipoServicio, JATipoTransaccion, JATipoMotivo;
+                            //parse de web service de combos
+                            JATIpoOperacion = JOListaDatos.getJSONObject(0).getJSONObject("ListaDatos").getJSONArray("cb_idtipodoc");
+                            // JATipoMotivo =      JOListaDatos.getJSONObject(0).getJSONObject("ListaDatos").getJSONArray("cb_idtipodoc");
+
+                            for (int i = 0; i < JATIpoOperacion.length(); i++) {
+                                listTipoDoc = GlobalFunctions.fillActvWithTextFromJSONArray(getApplicationContext(), JATIpoOperacion, actvTipoDoc, "id", "value");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }
+        );
+
+
+    }
+
+    private final int REQUEST_PERMISSION_PHONE_READ = 1;
+    private static final int PICK_FILE_REQUEST = 1;
+
+    public void permisoAdjuntar() {
+        int permissionCheckReadExternalStorage = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
+
+        if (permissionCheckReadExternalStorage != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(FormularioOffLine.this,Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                showExplanation("Permiso necesario", "Para continuar con el envío de archivos, otorgar permisos de lectura.", Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_PERMISSION_PHONE_READ);
+            } else {
+                requestPermission(Manifest.permission.READ_EXTERNAL_STORAGE, REQUEST_PERMISSION_PHONE_READ);
+            }
+        } else {
+            showFileChooser222();
+        }
+    }
+
+    private void showFileChooser222() {
+        //Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        Intent intent = new Intent();
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("*/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        String[] mimetypes = {  "image/jpeg", "image/pjpeg", "image/png", "image/gif", "application/pdf",
+                "application/msword", "application/vnd.ms-excel", "application/vnd.ms-powerpoint",
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation"};
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, mimetypes);
+        startActivityForResult(Intent.createChooser(intent, "Choose File to Upload.."),PICK_FILE_REQUEST);
+    }
+
+    private void requestPermission(String permissionName, int permissionRequestCode) {
+        ActivityCompat.requestPermissions(FormularioOffLine.this,
+                new String[]{permissionName}, permissionRequestCode);
+    }
+
+    private void showExplanation(String title,String message,final String permission,final int permissionRequestCode) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(title)
+                .setMessage(message)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        requestPermission(permission, permissionRequestCode);
+                    }
+                });
+        builder.create().show();
+    }
+
+    public void onClick(View view) {
+        if (this.btnAceptar == view) {
+            registrarFormulario();
+        }
+    }
+
+    private void registrarFormulario() {
+
+
+        cbo_type_document = actvTipoDoc.getText().toString().trim();
+        txt_number_document = txtNumeroDoc.getText().toString().trim();
+        txt_number_servicio = txtNumeroServicio.getText().toString().trim();
+        txt_direccion_correcta = txtDireccionCorrecta.getText().toString().trim();
+
+        token = ((TGestionaSession) getApplication()).getTokenMovil();
+        id_session = ((TGestionaSession) getApplication()).getIdSession();
+        id_vendedor = ((TGestionaSession) getApplication()).getIdVendedorChat();
+
+        final  ProgressDialog progressDialog = new ProgressDialog(this);
+
+        if(cbo_type_document.isEmpty()){
+            actvTipoDoc.setError("Seleccionar");
+        }else if(txt_number_document.isEmpty()){
+            txtNumeroDoc.setError("Completar");
+        }else if(txt_number_servicio.isEmpty()){
+            txtNumeroDoc.setError("Completar");
+        }else if(txt_direccion_correcta.isEmpty()){
+            txtNumeroDoc.setError("Completar");
+        }else{
+            progressDialog.show();
+            String WSMethod="";
+            WSMethod="saveform";
+            String URL = URL_DESARROLLO + WSMethod;
+            StringRequest request = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try{
+                        JSONObject jsonObject = new JSONObject(response);
+                        String msg = jsonObject.getString("msg");
+                        //Toast.makeText(FormularioOffLine.this, msg, Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
+                        Intent i = new Intent (FormularioOffLine.this, PopupFormularioOffLine.class);
+                        i.putExtra("ticket", msg);
+                        startActivity(i);
+                        actvTipoDoc.setText("");
+                        txtNumeroDoc.setText("");
+                        txtNumeroServicio.setText("");
+                        txtDireccionCorrecta.setText("");
+                    }catch (JSONException e){
+                        e.printStackTrace();
+                    }
+
+                    /*if (response.equalsIgnoreCase("Registrado")) {
+                        Toast.makeText(FormularioOffLine.this, "Registrado", Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                    } else {
+                        Toast.makeText(FormularioOffLine.this, response, Toast.LENGTH_SHORT).show();
+                        progressDialog.dismiss();
+                        actvTipoDoc.setText("Seleccione");
+                        txtNumeroDoc.setText("");
+                        txtNumeroServicio.setText("");
+                        txtDireccionCorrecta.setText("");
+                    }*/
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(FormularioOffLine.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String>params = new HashMap<String, String>();
+                    params.put("id_session", id_session);
+                    params.put("id_vendedor", id_vendedor);
+                    params.put("token", token);
+                    params.put("cbo_type_document", cbo_type_document);
+                    params.put("txt_number_document", txt_number_document);
+                    params.put("txt_number_servicio", txt_number_servicio);
+                    params.put("txt_direccion_correcta", txt_direccion_correcta);
+                    //params.put("file_evidencia_error", );
+                    return params;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(FormularioOffLine.this);
+            requestQueue.add(request);
+        }
+
+        /*HashMap hashMap = new HashMap();
+        hashMap.put("id_vendedor", ((TGestionaSession) getApplication()).getIdVendedorChat());
+        hashMap.put("token", ((TGestionaSession) getApplication()).getTokenMovil());
+        hashMap.put("id_session", ((TGestionaSession) getApplication()).getIdSession());
+        hashMap.put("cbo_type_document", this.actvTipoDoc.getText().toString());
+        hashMap.put("txt_number_document", txtNumeroDoc);
+        hashMap.put("txt_number_servicio", txtNumeroServicio);
+        hashMap.put("txt_direccion_correcta", txtDireccionCorrecta);
+        GlobalFunctions.callVolleyStringRequest(this, hashMap, varPublicas.URL_DESARROLLO + "saveform", this.volley, this.mRequest, new ServerCallback() {
+            public void onSuccess(String str) {
+                try {
+                    JSONArray jSONArray = new JSONArray(str);
+                    if (jSONArray.getJSONObject(0).getBoolean("Estado")) {
+                        JSONArray jSONArray2 = jSONArray.getJSONObject(0).getJSONArray("listaDatos");
+                        ArrayList arrayList = new ArrayList();
+                        for (int i = 0; i < jSONArray2.length(); i++) {
+                            DTO_ticket dTO_ticket = new DTO_ticket();
+                            dTO_ticket.solicitante = jSONArray2.getJSONObject(i).getString("solicitante");
+                            dTO_ticket.motivo = jSONArray2.getJSONObject(i).getString("motivo");
+                            dTO_ticket.estado = jSONArray2.getJSONObject(i).getString("estado");
+                            dTO_ticket.contador = jSONArray2.getJSONObject(i).getInt("cont");
+                            dTO_ticket.f87id = jSONArray2.getJSONObject(i).getInt("id");
+                            dTO_ticket.tipo = jSONArray2.getJSONObject(i).getString("tipo");
+                            arrayList.add(dTO_ticket);
+                        }
+                        ActivityConsultaTicket.this.loadData(arrayList);
+                    } else {
+                        Toast.makeText(ActivityConsultaTicket.this.getApplicationContext(), jSONArray.getJSONObject(0).getJSONObject("ListaDatos").getJSONArray("error").getJSONObject(0).getString("message"), 1).show();
+                    }
+                    ActivityConsultaTicket.this.customDialog.dismiss();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    FormularioOffLine.this.customDialog.dismiss();
+                }
+            }
+        });*/
+        //Toast.makeText(getApplicationContext(),"Registrado Correctamente",Toast.LENGTH_SHORT).show();
+    }
+
+}
+
+
+
+--------------------------------------------------------------------------
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="24dp" android:textColor="@color/colorCelesteLogo" android:id="@+id/tvTitleDatosCliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Datos del Cliente" android:layout_below="@+id/lLSolicitante"/>
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvTipoDocumento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tipo Doc. Cliente" android:layout_below="@+id/lLSolicitante"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvTipoDoc" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNumeroDoc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Número Doc. Cliente"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumeroDoc" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="9" android:layout_below="@+id/tvNumeroDoc" android:inputType="number"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNumeroServicio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Número Servicio"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumeroServicio" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/tvNumeroServicio" android:inputType="number"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvFile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Adjuntar Evidencia"/>
+        <LinearLayout
+            android:id="@+id/ly_adjunta_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adjuntar evidencia*"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cloud_upload_black_24dp"/>
+
+        </LinearLayout>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvDireccionCorrecta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Dirección Correcta"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtDireccionCorrecta" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/tvDireccionCorrecta"/>
+
+
+        <LinearLayout android:orientation="horizontal"   android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/btnAceptar" android:background="@drawable/botonpulsado_dialog" android:focusable="true" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:text="ACEPTAR" android:layout_weight="1"/>
+            <Button android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/btnCancelar" android:background="@drawable/botonpulsado_dialog" android:focusable="true" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="16dp" android:text="CANCELAR" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

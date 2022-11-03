@@ -1,0 +1,35 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     >
+
+    <item android:id="@+id/action_GoMenu"
+        android:title="@string/msgGoMenu"
+        android:icon="@drawable/home"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_New"
+        android:title="@string/newAdd"
+        android:icon="@drawable/ic_pencil"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Notificaciones"
+        android:title="@string/msgNotificaciones"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_Save"
+        android:title="@string/bandejaChat"
+        android:icon="@drawable/check"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        />
+    <!--android:visible="false"-->
+
+    <item android:id="@+id/action_CerrarSesion"
+        android:title="@string/msgCerrarSesion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

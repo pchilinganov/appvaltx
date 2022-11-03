@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/drawable-v24/style_rounded_search_ticket.xml" value="0.15885416666666666" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/activity_bandeja.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/card_view_mensajes.xml" value="0.21" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/content_main.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/layout_incidencia_masiva.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/layout_login.xml" value="0.1296875" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/layout_row_incidencia.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/layout/ly_activity_menu.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/mta5/tgeschat BK/app/src/main/res/menu/menu_ticket_search.xml" value="0.14270833333333333" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/abc_action_menu_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/activity_bandeja.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/activity_chat.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/card_view_mensajes.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/content_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/design_navigation_menu_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_encuesta_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_incidencia_masiva.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_landscape_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_loading.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_login.xml" value="0.33" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_row_incidencia.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/layout_top_consultas_tiendas_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_activity_consulta_ticket.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_activity_detalle_ticket.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_activity_menu.xml" value="0.25" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_activity_menu_incidencia.xml" value="0.2078804347826087" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_dialog_formulario_offline.xml" value="0.25" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_dialog_tipo_solicitud.xml" value="0.21195652173913043" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_modal_incidencia.xml" value="0.2078804347826087" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/ly_modal_upload_file.xml" value="0.22418478260869565" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/mensajeria.xml" value="0.18072916666666666" />
+        <entry key="..\:/app/produccion/app/src/main/res/layout/splash_activity.xml" value="0.2078804347826087" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable-hdpi/style_rounded_dialog.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/circulo_chat_dos.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/circulo_chat_uno.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/circulo_texto.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/home_incidencia.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_arrow_back_black_24dp.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_arrow_drop_down_black_24dp.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_arrow_drop_up_black_24dp.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_chart_pie.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_chat.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_check_bold.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_chevron_down.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_chevron_up.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_cloud_upload_black_24dp.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.19589743589743588" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_minus.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_plus.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_refresh_black_24dp.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/style_circular_progress_bar.xml" value="0.1935185185185185" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/style_rounded_view_green.xml" value="0.1875" />
+        <entry key="..\:/app/pruebas/app/src/main/res/drawable/style_rounded_view_pink.xml" value="0.1875" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/abc_activity_chooser_view.xml" value="0.14114583333333333" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/layout_incidencia_masiva.xml" value="0.1" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/layout_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_activity_consulta_ticket.xml" value="0.2078804347826087" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_activity_detalle_ticket.xml" value="0.22" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_activity_menu.xml" value="0.25" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_dialog_formulario_offline.xml" value="0.25" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_dialog_tipo_solicitud.xml" value="0.33" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_modal_upload_file.xml" value="0.21920289855072464" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/ly_popup_formulario_offline.xml" value="0.18958333333333333" />
+        <entry key="..\:/app/pruebas/app/src/main/res/layout/mensajeria.xml" value="0.2318840579710145" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

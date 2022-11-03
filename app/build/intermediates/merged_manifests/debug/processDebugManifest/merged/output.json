@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":45,"versionName":"12.3","enabled":true,"outputFile":"app-debug.apk","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"chat.atc.tges.tgeschat","split":"","minSdkVersion":"21"}}]

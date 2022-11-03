@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingBottom="20dp"
+    android:background="@drawable/style_rounded_dialog"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripción de incidencia*"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        />
+
+    <EditText
+        android:id="@+id/txtdescripcionincidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNumeroDoc"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="14dp"
+        android:background="@drawable/style_rounded_edittext_states_vf"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ly_adjunta_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adjuntar evidencia*"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_cloud_upload_black_24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAceptar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            android:text="ACEPTAR"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/botonpulsado_dialog"
+            />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            android:text="CANCELAR"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/botonpulsado_dialog"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

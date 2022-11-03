@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/style_rounded_dialog" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/bg_circle_blue" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/btngotoback" android:background="@color/bg_circle_blue" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_back_black_24dp" android:layout_weight="8"/>
+            <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/nroTicket" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ticket: 20000" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/colorfondoGrey" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@color/bg_circle_blue" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_weight="25"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle3" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle4" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle5" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle6" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle8" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo8" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor8" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle9" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo9" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor9" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle10" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle11" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo11" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor11" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle12" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo12" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor12" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle13" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo13" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor13" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle14" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle15" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor15" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo16" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor16" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle17" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo17" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor17" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle18" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo18" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor18" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle19" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo19" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor19" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle20" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo20" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor20" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle21" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo21" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor21" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle22" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo22" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor22" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle23" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo23" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor23" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle24" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo24" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor24" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle25" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo25" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor25" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle26" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo26" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor26" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle27" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo27" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor27" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle28" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo28" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor28" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle29" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo29" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor29" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/layoutdetalle30" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+                    <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@+id/txtTitulo30" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txtValor30" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tipo de servicio" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

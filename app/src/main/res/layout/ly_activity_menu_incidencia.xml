@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_refresh_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textSize="16dp" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bienvenido"/>
+            <TextView android:textSize="22dp" android:textStyle="bold" android:gravity="center" android:id="@+id/tvNombreUsuario" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="80dp" android:text="Nombre Apellido y Apellido"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/ll1" android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginBottom="100dp">
+                <RelativeLayout android:id="@+id/rlSpaceLeft" android:background="@drawable/style_rounded_view_orange" android:visibility="gone" android:layout_width="88dp" android:layout_height="match_parent" android:layout_toRightOf="@+id/rlVentasFija"/>
+                <RelativeLayout android:id="@+id/rlChat" android:background="@drawable/style_rounded_view_orange" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp" android:layout_weight="1" android:layout_toRightOf="@+id/rlVentasFija">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:id="@+id/imgReclamos" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/home_incidencia" android:layout_weight="4"/>
+                        <TextView android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INCIDENCIAS NO MASIVAS"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/rlSpaceRight" android:background="@drawable/style_rounded_view_orange" android:visibility="gone" android:layout_width="88dp" android:layout_height="match_parent" android:layout_toRightOf="@+id/rlVentasFija"/>
+                <RelativeLayout android:orientation="vertical" android:id="@+id/rlVentasFija" android:background="@drawable/style_rounded_view_pink" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="16dp" android:layout_weight="1">
+                    <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <ImageView android:id="@+id/imgAsistencia" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/home_incidencia" android:layout_weight="4"/>
+                        <TextView android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INCIDENCIAS MASIVAS"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="24dp" android:textColor="@color/colorCelesteLogo" android:id="@+id/tvTitleDatosCliente" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Datos del Cliente" android:layout_below="@+id/lLSolicitante"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvTipoDocumento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tipo Doc. Cliente" android:layout_below="@+id/lLSolicitante"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvTipoDoc" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNumeroDoc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Número Doc. Cliente"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumeroDoc" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="9" android:layout_below="@+id/tvNumeroDoc" android:inputType="number"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNumeroServicio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Número Servicio"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumeroServicio" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/tvNumeroServicio" android:inputType="number"/>
+
+        <!--<TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvDireccionCorrecta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Dirección Correcta"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtDireccionCorrecta" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/tvDireccionCorrecta"/>-->
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvDepartamento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Departamento" android:layout_below="@+id/tvDireccionCorrecta"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvDepartamento" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvProvincia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Provincia" android:layout_below="@+id/tvDepartamento"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvProvincia" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvDistrito" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Distrito" android:layout_below="@+id/tvProvincia"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvDistrito" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+            <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvTipoVia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tipo de Vía" android:layout_below="@+id/tvDistrito"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvTipoVia" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNombreVia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Nombre Vía"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNombreVia" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="64" android:layout_below="@+id/tvTipoVia"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNumero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Número"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumero" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="6" android:layout_below="@+id/tvNombreVia"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvPiso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Piso"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtPiso" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="3" android:layout_below="@+id/tvNumero"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvNroDepartamento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Interior/Nro. Dpto"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNroDepartamento" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="5" android:layout_below="@+id/tvPiso"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvTipoComplejoVivienda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tipo Complejo Vivienda" android:layout_below="@+id/tvNroDepartamento"/>
+        <AutoCompleteTextView android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/actvTipoComplejoVivienda" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:hint="Seleccione" android:editable="false" android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp" android:layout_centerHorizontal="true" android:inputType="none" android:windowSoftInputMode="stateAlwaysHidden" android:overlapAnchor="false"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvComplejoVivienda" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Complejo Vivienda"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtComplejoVivienda" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="40" android:layout_below="@+id/tvTipoComplejoVivienda"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvBloqueManzana" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Bloque/Manzana"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtBloqueManzana" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="4" android:layout_below="@+id/tvComplejoVivienda"/>
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvLote" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Lote"/>
+        <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtLote" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLength="3" android:layout_below="@+id/tvBloqueManzana"/>
+
+
+        <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvFile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Adjuntar Evidencia"/>
+        <LinearLayout
+            android:id="@+id/ly_adjunta_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adjuntar evidencia*"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorBlack"
+                />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cloud_upload_black_24dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout android:orientation="horizontal"   android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/btnAceptar" android:background="@drawable/botonpulsado_dialog" android:focusable="true" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="16dp" android:layout_marginRight="16dp" android:text="ACEPTAR" android:layout_weight="1"/>
+            <Button android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/btnCancelar" android:background="@drawable/botonpulsado_dialog" android:focusable="true" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="16dp" android:text="CANCELAR" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

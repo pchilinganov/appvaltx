@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ly_container_evidencia" android:background="@drawable/style_rounded_dialog" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/colorBlack" android:gravity="center" android:id="@+id/txtNoevidencia" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estimado porfavor intentar por las opciones del chatbot. Gracias."/>
+    <TextView android:textSize="18dp" android:textStyle="bold" android:textColor="@color/colorBlack" android:gravity="center" android:id="@+id/txtTitleEviden" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="¿Tienes evidencia?"/>
+    <RadioButton android:textColor="@color/colorBlack" android:id="@+id/chkoptSi" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SI"/>
+    <RadioButton android:textColor="@color/colorBlack" android:id="@+id/chkoptNo" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NO"/>
+    <LinearLayout android:id="@+id/ly_shotboton" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/btnAceptar" android:background="@drawable/botonpulsado_dialog" android:focusable="true" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginTop="16dp" android:text="Aceptar" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

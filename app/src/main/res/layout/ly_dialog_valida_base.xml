@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="16dp" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txt_svalinea_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Consultar documento del Vendedor"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:src="@drawable/separador"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txt_documento_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Nro Documento: "/>
+            <EditText android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/txtNumDoc" android:background="@drawable/style_rounded_edittext_states_vf" android:paddingLeft="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:src="@drawable/separador"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="12dp" android:textColor="@color/colorWhite" android:id="@+id/btnVerificarDocumento" android:background="@drawable/botonpulsado_general" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_margenLateral_portrait_login_5p" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/activity_margenLateral_portrait_login_5p" android:text="Verificar Documento" android:drawableLeft="@drawable/ic_check_bold"/>
+    </LinearLayout>
+</LinearLayout>

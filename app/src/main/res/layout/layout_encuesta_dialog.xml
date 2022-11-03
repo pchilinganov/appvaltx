@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llEncuesta1" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="20dp" android:textStyle="bold" android:textColor="@color/bg_circle_blue" android:gravity="center" android:layout_gravity="center" android:id="@+id/lblTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="AYÚDANOS A MEJORAR"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="20dp" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/lblTitle2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="¿Cómo calificarías la atención?"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:padding="4dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp">
+                <ImageButton android:id="@+id/btnMuyMalo" android:background="@drawable/btn_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/muy_malo" android:layout_weight="1"/>
+                <ImageButton android:id="@+id/btnMalo" android:background="@drawable/btn_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/malo" android:layout_weight="1"/>
+                <ImageButton android:id="@+id/btnRegular" android:background="@drawable/btn_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/regular" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvMuyMalo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Muy Malo" android:layout_weight="1"/>
+                <TextView android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvMalo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Malo" android:layout_weight="1"/>
+                <TextView android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvRegular" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Regular" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:padding="4dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp">
+                <ImageButton android:id="@+id/btnBueno" android:background="@drawable/btn_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="50dp" android:src="@drawable/bueno" android:layout_weight="1"/>
+                <ImageButton android:id="@+id/btnMuyBueno" android:background="@drawable/btn_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="50dp" android:src="@drawable/muybueno" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvBueno" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="50dp" android:text="Bueno" android:layout_weight="1"/>
+                <TextView android:textStyle="bold" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvMuyBueno" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="50dp" android:text="Muy Bueno" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llEncuesta2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="20dp" android:textStyle="bold" android:textColor="@color/bg_circle_blue" android:gravity="center" android:layout_gravity="center" android:id="@+id/lblTitle4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="AYÚDANOS A MEJORAR"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="20dp" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center" android:id="@+id/lblTitle3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="¿Su consulta o solicitud fue resuelta?"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp">
+            <Button android:textColor="@color/colorWhite" android:id="@+id/btnContinuar" android:background="@drawable/botonpulsado_general" android:paddingLeft="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="SÍ" android:layout_weight="1"/>
+            <Button android:textColor="@color/colorWhite" android:id="@+id/btnCancelar" android:background="@drawable/botonpulsado_general" android:paddingLeft="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:text="NO" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

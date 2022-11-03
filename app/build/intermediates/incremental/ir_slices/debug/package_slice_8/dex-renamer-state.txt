@@ -1,0 +1,4 @@
+#Tue Sep 01 01:00:07 PET 2020
+base.0=/Users/leninlarry/Documents/proyect/tgestiona_apps/tgeschat (subida con integraciona appVentas) 211119/app/build/intermediates/transforms/dexMerger/debug/8
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="16dp" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/tvConfirmacion" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="sss"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:src="@drawable/separador"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="12dp" android:textColor="@color/colorWhite" android:id="@+id/btnAceptar" android:background="@drawable/botonpulsado_general" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_margenLateral_portrait_login_5p" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/activity_margenLateral_portrait_login_5p" android:text="Aceptar" android:drawableLeft="@drawable/ic_check_bold"/>
+    </LinearLayout>
+</LinearLayout>

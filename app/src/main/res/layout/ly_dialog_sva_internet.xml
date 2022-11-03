@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="16dp" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+    <TextView android:textSize="14sp" android:textColor="@color/colorBlack" android:id="@+id/txt_svalinea_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="SVA Línea"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:src="@drawable/separador"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+            <CheckBox android:textColor="@color/colorBlack" android:id="@+id/opcion_0_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SEGURIDAD TOTAL RESIDENCIAL"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp" android:src="@drawable/separador"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <CheckBox android:textColor="@color/colorBlack" android:id="@+id/chkNoAplica" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NO APLICA" android:layout_weight="1"/>
+        <Button android:id="@+id/btnClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Close"/>
+        <Button android:id="@+id/btnGuardar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Guardar"/>
+    </LinearLayout>
+</LinearLayout>

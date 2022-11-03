@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+    <TextView android:textSize="18dp" android:textColor="@color/colorBlack" android:gravity="left" android:id="@+id/title1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="Segmento del cliente"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+        <Button android:textColor="@color/colorBlack" android:id="@+id/btnResidencial" android:background="#5bc0de" android:padding="4dp" android:focusable="true" android:layout_width="100dp" android:layout_height="50dp" android:layout_marginRight="10dp" android:text="RESIDENCIAL"/>
+        <Button android:textColor="@color/colorBlack" android:id="@+id/btnNegocios" android:background="#5cb85c" android:focusable="true" android:layout_width="100dp" android:layout_height="50dp" android:layout_marginLeft="10dp" android:text="NEGOCIOS"/>
+    </LinearLayout>
+    <TextView android:textSize="18dp" android:textColor="@color/colorRed" android:gravity="center" android:id="@+id/tvRegresar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Regresar"/>
+</LinearLayout>

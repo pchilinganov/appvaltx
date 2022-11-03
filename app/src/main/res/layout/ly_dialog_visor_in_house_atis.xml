@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/style_rounded_dialog" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18dp" android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:background="@color/colorPrimary" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Resultados" android:layout_alignParentTop="true"/>
+        <ScrollView android:orientation="vertical" android:id="@+id/scLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/style_rounded_table_relative_states" android:padding="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtBack" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Folio" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtFolio" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cliente" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtCliente" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Teléfono" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtTelefono" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Departamento" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtDepartamento" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dirección" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txt_cdireccion" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="F. Contrato" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtFechaContrato" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="fecha contrato Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Producto" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtProducto" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="producto Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estado" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtEstado" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="estado Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sub-Estado" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtSubEstado" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Subestado Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Acción" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtAccion" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Accion Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <TextView android:textColor="@color/colorRed" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="8dp" android:text="Ya se encuentra registrada la venta con los siguientes datos:" android:layout_weight="1"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvspeech" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Folio" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvfhcontrato" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cliente" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvestado_solicitud" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Teléfono" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvtelefono2" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Departamento" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvgestion" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Dirección" android:layout_weight="1"/>
+                    <TextView android:id="@+id/txtDireccionATIS" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Back Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="F. Contrato" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvback2" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="fecha contrato Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Producto" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvpeticion_atis" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_column="1" android:text="producto Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estado" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvidgestion" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="estado Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textStyle="bold" android:background="@drawable/style_rounded_table_relative_states_gray" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Sub-Estado" android:layout_weight="1"/>
+                    <TextView android:id="@+id/tvp_peticion" android:background="@drawable/style_rounded_table_relative_states" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_column="1" android:text="Subestado Value" android:layout_weight="1" android:layout_row="0"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/colorWhite" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_alignParentBottom="true">
+                    <ImageView android:layout_width="match_parent" android:layout_height="2dp" android:src="@drawable/separador"/>
+                    <TextView android:textColor="@color/colorRed" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Procesando Consulta en CMS/ATIS"/>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <Button android:gravity="left" android:id="@+id/btnContinuar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Continuar" android:layout_weight="1"/>
+                        <TextView android:gravity="right" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="00:00" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
